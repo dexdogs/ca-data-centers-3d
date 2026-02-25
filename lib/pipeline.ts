@@ -31,3 +31,4 @@ export type PipelineDataCenter = DataCenter & {
 export const PIPELINE_DATA_CENTERS: PipelineDataCenter[] = enrichWithCCA(
   RAW_PIPELINE.map(p => ({ id: p.id, name: p.name, lat: p.lat, lng: p.lng, operator: p.operator }))
 ).map((dc, i) => ({ ...dc, ...RAW_PIPELINE[i], status: 'pipeline' as const }));
+
