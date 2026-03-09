@@ -71,40 +71,6 @@ Note: There is no California Senate Bill (SB) equivalent in the embodied carbon 
 
 ---
 
-## Setup
-
-### 1. Clone and install
-```bash
-git clone https://github.com/dexdogs/ca-data-centers-3d.git
-cd ca-data-centers-3d
-npm install
-```
-
-### 2. Configure environment
-```bash
-cp env.local.example .env.local
-```
-
-Edit .env.local and add your Mapbox token from account.mapbox.com. The EC3 API token is optional — without it the app uses demo EPD data.
-
-### 3. Run locally
-```bash
-npm run dev
-```
-
----
-
-## Deploy to Vercel
-
-1. Go to vercel.com, add new project, import this repo
-2. Set Framework Preset to Next.js
-3. Add environment variable NEXT_PUBLIC_MAPBOX_TOKEN
-4. Click Deploy
-
-Every git push to main auto-redeploys.
-
----
-
 ## Data Sources
 
 - Existing data center locations: OpenStreetMap via Overpass API plus curated known facilities
